@@ -21,10 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-echo "# app_api_spotify" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/fabrice126/app_api_spotify.git
-git push -u origin master
