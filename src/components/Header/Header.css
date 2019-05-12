@@ -1,0 +1,18 @@
+#Header {
+  background-color: #2196f3;
+  height: 70px;
+  display: flex;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.3);
+}
+#Header div {
+  align-self: center;
+  font-size: 2em;
+  color: white;
+}
+
+@media screen and (max-width: 320px) {
+  #Header div {
+    font-size: 1.5em;
+    text-align: center;
+  }
+}

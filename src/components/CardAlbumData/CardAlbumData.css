@@ -1,0 +1,18 @@
+:root {
+  --font-size-small: 0.7em;
+}
+#CardAlbumData {
+  color: dimgrey;
+}
+#CardAlbumData .card-album-artist-name {
+  font-size: var(--font-size-small);
+}
+#CardAlbumData .card-album-infos {
+  font-size: var(--font-size-small);
+  bottom: 10px;
+}
+#CardAlbumData .card-body {
+  flex: 1 1 auto;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  line-height: 18px;
+}

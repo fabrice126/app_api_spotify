@@ -1,0 +1,28 @@
+#Card {
+  padding: 20px;
+}
+
+#Card .card-info {
+  margin: auto;
+  transition: linear 0.2s;
+  max-width: 18rem;
+}
+
+#Card .card-info:hover {
+  transition: linear 0.2s;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.14);
+}
+
+#Card .img-height {
+  height: 200px;
+}
+#Card .urlSpotify {
+  background: white;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: 1px solid #cacaca;
+  height: 15%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

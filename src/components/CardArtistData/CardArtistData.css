@@ -1,0 +1,9 @@
+#CardArtistData {
+  color: dimgrey;
+}
+#CardArtistData .card-artist-followers {
+  font-size: 0.7em;
+}
+#CardArtistData .card-artist-stars {
+  bottom: 10px;
+}

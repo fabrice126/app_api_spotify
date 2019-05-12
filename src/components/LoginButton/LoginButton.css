@@ -1,0 +1,29 @@
+#LoginButton {
+  height: 70px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: solid darkgrey 1px;
+  margin-bottom: 10%;
+}
+
+#LoginButton .button:hover {
+  transition: linear 0.2s;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.14);
+}
+#LoginButton div img {
+  width: 50px;
+  float: right;
+}
+
+#LoginButton .text-login {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 300;
+}
+#LoginButton .img-spotify {
+  position: absolute;
+  right: 3%;
+}

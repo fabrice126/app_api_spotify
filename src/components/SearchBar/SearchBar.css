@@ -1,0 +1,31 @@
+:root {
+  --input-height: 50px;
+}
+#SearchBar input::placeholder {
+  text-align: center;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+#SearchBar .input-group {
+  border: solid darkgrey 1px;
+  border-radius: 5px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#SearchBar input {
+  border: none;
+  background-color: white;
+  height: var(--input-height);
+}
+
+#SearchBar input:focus {
+  outline: none;
+}
+
+#SearchBar .fa-search {
+  color: gray;
+  margin-right: 15px;
+  line-height: var(--input-height);
+}

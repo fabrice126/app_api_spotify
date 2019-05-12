@@ -1,0 +1,12 @@
+#Album {
+  margin-top: 20px;
+}
+#Album .infosLabel {
+  margin-left: 5px;
+}
+#Album .artistLabel {
+  font-size: 2rem;
+}
+#Album .albumLabel {
+  font-size: 1rem;
+}
