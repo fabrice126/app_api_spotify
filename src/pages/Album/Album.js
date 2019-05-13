@@ -33,7 +33,7 @@ class Album extends React.Component {
       totalPage = getTotalPage(total, limit);
       this.setState({ totalPage, albums: items, artist });
     } catch (error) {
-      console.error("error :", error);
+      console.error("error componentDidMount :", error);
     }
   }
   /**
@@ -63,16 +63,16 @@ class Album extends React.Component {
   };
   render() {
     const { albums, artist, totalPage } = this.state;
+    const artistName = artist ? artist.name : "";
     return (
       <div id="Album" className="container">
         <div className="infosLabel">
-          <div className="artistLabel">{artist && artist.name}</div>
+          <div className="artistLabel">{}</div>
           <div className="albumLabel">Albums</div>
         </div>
         <div className="row padding-top-200px">
           {albums.map(album => {
             const { id, name, images, total_tracks, release_date, external_urls } = album;
-            const { name: artistName } = artist;
             let image = "";
             const lengthImg = images.length;
             if (lengthImg) {
@@ -80,7 +80,7 @@ class Album extends React.Component {
               if (img.url) image = img.url;
             }
             let externalLinkSpotify = "";
-            if(external_urls && external_urls.spotify){
+            if (external_urls && external_urls.spotify) {
               externalLinkSpotify = external_urls.spotify;
             }
             return (
