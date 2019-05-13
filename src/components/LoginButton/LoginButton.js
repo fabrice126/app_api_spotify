@@ -6,8 +6,6 @@ class LoginButton extends React.Component {
     window.location = `https://accounts.spotify.com/authorize?client_id=${config.key_api}&redirect_uri=${encodeURIComponent(process.env.REACT_APP_DOMAIN)}callback%2F&scope=user-read-private%20user-read-email&response_type=token&state=123`;
   }
   render() {
-    console.log();
-
     return (
       <button id="LoginButton" className="align-middle btn btn-light col-sm-4 mx-4 cursor-pointer" onClick={this.handleClickLogin}>
         <div className="text-login">Login</div>
