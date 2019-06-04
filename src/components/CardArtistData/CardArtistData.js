@@ -7,7 +7,7 @@ import "./CardArtistData.css";
 function CardArtistData(props) {
   const { name, followers, stars } = props;
   return (
-    <div id="CardArtistData" className="card-body position-relative">
+    <div className="CardArtistData card-body position-relative">
       <div>{name}</div>
       <div className="card-artist-followers">
         <span>{formatNumber(followers)} followers</span>

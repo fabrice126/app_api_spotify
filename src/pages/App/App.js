@@ -6,21 +6,24 @@ import Artist from "../Artist/Artist.js";
 import Album from "../Album/Album.js";
 import Header from "../../components/Header/Header.js";
 import PrivateRoute from "../../components/PrivateRoute/PrivateRoute.js";
+import ErrorBoundary from "../../components/ErrorBoundary/ErrorBoundary.js";
 import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <div id="App">
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Login} />
-          <Route path="/callback" exact component={AuthCallback} />
-          <PrivateRoute path="/artist" exact component={Artist} />
-          <PrivateRoute path="/artist/:artistId" exact component={Album} />
-        </Switch>
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div id="App">
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Login} />
+            <Route path="/callback" exact component={AuthCallback} />
+            <PrivateRoute path="/artist" exact component={Artist} />
+            <PrivateRoute path="/artist/:artistId" exact component={Album} />
+          </Switch>
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 }
 

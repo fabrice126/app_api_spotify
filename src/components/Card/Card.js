@@ -11,11 +11,11 @@ class Card extends React.PureComponent {
   };
   render() {
     const { name, image, children, externalLink, externalLinkText } = this.props;
-    let heightTotal = "350px";
-    if (externalLink) heightTotal = "400px";
+    let withExternalLink = "";
+    if (externalLink) withExternalLink = "withExternalLink";
     return (
-      <article id="Card" className="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-        <div className="card card-info d-flex flex-column cursor-pointer" style={{ height: heightTotal }} onClick={this.handleClick}>
+      <article className="Card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+        <div className={`card ${withExternalLink} card-info d-flex flex-column cursor-pointer`} onClick={this.handleClick}>
           <img className="card-img-top img-height" src={image || config.default_image} alt={`${name}`} />
           {children}
           {externalLink && (

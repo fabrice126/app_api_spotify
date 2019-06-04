@@ -76,8 +76,8 @@ class Artist extends React.Component {
   };
   /**
    * Get artists objects and totalPage
-   * @param {Object} resultReqArtist 
-   * @param {Number} limit 
+   * @param {Object} resultReqArtist
+   * @param {Number} limit
    */
   getDataFromRequestArtist(resultReqArtist, limit) {
     let totalPage = 0;
@@ -98,7 +98,7 @@ class Artist extends React.Component {
     const { historyAction, value } = e.target;
     this.lastRequest = Date.now();
     const timestamp = this.lastRequest;
-    this.setState({ search: value }, async () => {
+    this.setState({ search: value, currentPage: 0 }, async () => {
       try {
         const { limit, search } = this.state;
         const resultArtist = await this.getQueryArtist(search);
@@ -151,7 +151,7 @@ class Artist extends React.Component {
   };
 
   render() {
-    const { artists, search, totalPage } = this.state;
+    const { artists, search, totalPage, currentPage } = this.state;
     return (
       <div id="Artist" className="container">
         <SearchBar ref={this.searchBarRef} search={search} handleSearchChange={this.handleSearchChange} />
@@ -181,6 +181,7 @@ class Artist extends React.Component {
             onPageChange={this.handlePageChange}
             previousLabel={"<"}
             nextLabel={">"}
+            forcePage={currentPage}
             breakClassName={"break-me"}
             breakLabel={"..."}
             containerClassName={"pagination"}

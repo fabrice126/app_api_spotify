@@ -9,7 +9,7 @@ class AuthCallback extends React.Component {
             console.error(this.getHashValue('error'));
         } else if(access_token && token_type) {
             window.localStorage.setItem("jwt-spotify", `${token_type} ${access_token}`)
-            this.props.history.push('/artist')
+            this.props.history.replace('/artist')
         } else {
             // 
         }

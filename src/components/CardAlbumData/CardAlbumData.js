@@ -6,7 +6,7 @@ import textAbstract from "../../lib/textAbstract"
 function CardAlbumData(props) {
   const { name, totalTracks, artistName, releaseDate } = props;
   return (
-    <div id="CardAlbumData" className="card-body position-relative">
+    <div className="CardAlbumData card-body position-relative">
       <div title={name}>{textAbstract(name, 50)}</div>
       <div className="card-album-artist-name">
         <span>{artistName}</span>
