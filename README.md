@@ -1,5 +1,5 @@
 # app_api_spotify
-  - https://app-api-spotify.fjauvat.fr/
+  - https://d1wp0ua4gaj68.cloudfront.net/
 ## start-up
 
   - `npm install`
